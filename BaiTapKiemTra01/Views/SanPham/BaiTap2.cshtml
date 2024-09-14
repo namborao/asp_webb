@@ -1,0 +1,16 @@
+﻿@model SanPhamViewModel
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin sản phẩm</title>
+</head>
+<body>
+    <h1>Thông tin sản phẩm</h1>
+    <p><strong>Tên sản phẩm:</strong> @Model.TenSP</p>
+    <p><strong>Giá sản phẩm:</strong> @Model.Gia VND</p>
+    <img src="@Model.Anh" alt="@Model.TenSP" style="width:300px;height:auto;" />
+</body>
+</html>
