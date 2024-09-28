@@ -1,0 +1,48 @@
+﻿@model IEnumerable<BaiKiemTra02.Models.LopHoc> 
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <title>Danh Sách Lớp Học</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Danh Sách Lớp Học</h1>
+        <a asp-action="Create" class="btn btn-primary mb-3">Thêm Mới</a>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Tên Lớp Học</th>
+                    <th>Năm Nhập Học</th>
+                    <th>Năm Ra Trường</th>
+                    <th>Số Lượng Sinh Viên</th>
+                    <th>Thao Tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var lopHoc in Model) // Duyệt qua danh sách lớp học
+                {
+                    <tr>
+                        <td>@lopHoc.Id</td>
+                        <td>@lopHoc.TenLopHoc</td>
+                        <td>@lopHoc.NamNhapHoc</td>
+                        <td>@lopHoc.NamRaTruong</td>
+                        <td>@lopHoc.SoLuongSinhVien</td>
+                        <td>
+                            <a asp-action="Details" asp-route-id="@lopHoc.Id" class="btn btn-info">Chi Tiết</a>
+                            <a asp-action="Edit" asp-route-id="@lopHoc.Id" class="btn btn-warning">Chỉnh Sửa</a>
+                            <a asp-action="Delete" asp-route-id="@lopHoc.Id" class="btn btn-danger">Xóa</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

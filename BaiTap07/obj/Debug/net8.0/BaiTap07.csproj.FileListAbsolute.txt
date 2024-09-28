@@ -564,3 +564,16 @@ C:\Users\Admin\Documents\ltw\ASP_web\BaiTap07\bin\Debug\net8.0\runtimes\win\lib\
 C:\Users\Admin\Documents\ltw\ASP_web\BaiTap07\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\Users\Admin\Documents\ltw\ASP_web\BaiTap07\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Admin\Documents\ltw\ASP_web\BaiTap07\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\hoc\LTWEB_ASP\asp_webb\BaiTap07\obj\Debug\net8.0\BaiTap07.csproj.AssemblyReference.cache
+C:\hoc\LTWEB_ASP\asp_webb\BaiTap07\obj\Debug\net8.0\BaiTap07.GeneratedMSBuildEditorConfig.editorconfig
+C:\hoc\LTWEB_ASP\asp_webb\BaiTap07\obj\Debug\net8.0\BaiTap07.AssemblyInfoInputs.cache
+C:\hoc\LTWEB_ASP\asp_webb\BaiTap07\obj\Debug\net8.0\BaiTap07.AssemblyInfo.cs
+C:\hoc\LTWEB_ASP\asp_webb\BaiTap07\obj\Debug\net8.0\BaiTap07.csproj.CoreCompileInputs.cache
+C:\hoc\LTWEB_ASP\asp_webb\BaiTap07\obj\Debug\net8.0\BaiTap07.MvcApplicationPartsAssemblyInfo.cs
+C:\hoc\LTWEB_ASP\asp_webb\BaiTap07\obj\Debug\net8.0\BaiTap07.MvcApplicationPartsAssemblyInfo.cache
+C:\hoc\LTWEB_ASP\asp_webb\BaiTap07\obj\Debug\net8.0\BaiTap07.RazorAssemblyInfo.cache
+C:\hoc\LTWEB_ASP\asp_webb\BaiTap07\obj\Debug\net8.0\BaiTap07.RazorAssemblyInfo.cs
+C:\hoc\LTWEB_ASP\asp_webb\BaiTap07\obj\Debug\net8.0\BaiTap07.sourcelink.json
+C:\hoc\LTWEB_ASP\asp_webb\BaiTap07\obj\Debug\net8.0\BaiTap07.dll
+C:\hoc\LTWEB_ASP\asp_webb\BaiTap07\obj\Debug\net8.0\refint\BaiTap07.dll
+C:\hoc\LTWEB_ASP\asp_webb\BaiTap07\obj\Debug\net8.0\BaiTap07.pdb

@@ -26,6 +26,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\hoc\LTWEB_ASP\asp_webb\BaiTap07
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/hoc/LTWEB_ASP/asp_webb/BaiTap07/Areas/Admin/Views/SanPham/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2FuUGhhbVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/hoc/LTWEB_ASP/asp_webb/BaiTap07/Areas/Admin/Views/SanPham/Upsert.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2FuUGhhbVxVcHNlcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/hoc/LTWEB_ASP/asp_webb/BaiTap07/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
