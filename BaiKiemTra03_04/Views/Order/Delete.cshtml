@@ -1,0 +1,21 @@
+﻿@model BaiKiemTra03_04.Models.Order
+
+@{
+    ViewData["Title"] = "Xóa đơn hàng";
+}
+
+<h2>Xóa Đơn Hàng</h2>
+
+<h3>Bạn có chắc chắn muốn xóa đơn hàng này?</h3>
+<div>
+    <h4>Đơn Hàng: @Model.OrderId</h4>
+    <p>Ngày Đặt Hàng: @Model.OrderDate.ToShortDateString()</p>
+    <p>Tổng Giá Trị: @Model.TotalAmount</p>
+    <p>Nhà Cung Cấp: @Model.Supplier.SupplierName</p>
+</div>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="OrderId" />
+    <button type="submit" class="btn btn-danger">Xóa</button> |
+    <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+</form>

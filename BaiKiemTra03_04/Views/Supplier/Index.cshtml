@@ -1,0 +1,38 @@
+﻿@model IEnumerable<BaiKiemTra03_04.Models.Supplier>
+
+@{
+    ViewData["Title"] = "Danh sách nhà cung cấp";
+}
+
+<h2>Danh sách nhà cung cấp</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Mã Nhà Cung Cấp</th>
+            <th>Tên Nhà Cung Cấp</th>
+            <th>Địa Chỉ</th>
+            <th>Số Điện Thoại</th>
+            <th>Email</th>
+            <th>Hành Động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.SupplierId</td>
+                <td>@item.SupplierName</td>
+                <td>@item.Address</td>
+                <td>@item.PhoneNumber</td>
+                <td>@item.Email</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.SupplierId">Sửa</a> |
+                    <a asp-action="Delete" asp-route-id="@item.SupplierId">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Create" class="btn btn-primary">Thêm Nhà Cung Cấp</a>

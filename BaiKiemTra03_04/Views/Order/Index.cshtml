@@ -1,0 +1,38 @@
+﻿@model IEnumerable<BaiKiemTra03_04.Models.Order>
+
+@{
+    ViewData["Title"] = "Danh sách đơn hàng";
+}
+
+<h2>Danh sách đơn hàng</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Mã Đơn Hàng</th>
+            <th>Ngày Đặt Hàng</th>
+            <th>Tổng Giá Trị</th>
+            <th>Nhà Cung Cấp</th>
+            <th>Tình Trạng</th>
+            <th>Hành Động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.OrderId</td>
+                <td>@item.OrderDate.ToShortDateString()</td>
+                <td>@item.TotalAmount</td>
+                <td>@item.Supplier.SupplierName</td>
+                <td>@item.OrderStatus</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.OrderId">Sửa</a> |
+                    <a asp-action="Delete" asp-route-id="@item.OrderId">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Create" class="btn btn-primary">Tạo Đơn Hàng Mới</a>

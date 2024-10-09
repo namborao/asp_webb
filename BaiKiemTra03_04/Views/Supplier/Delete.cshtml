@@ -1,0 +1,22 @@
+﻿@model BaiKiemTra03_04.Models.Supplier
+
+@{
+    ViewData["Title"] = "Xóa nhà cung cấp";
+}
+
+<h2>Xóa Nhà Cung Cấp</h2>
+
+<h3>Bạn có chắc chắn muốn xóa nhà cung cấp này?</h3>
+
+<div>
+    <h4>Nhà Cung Cấp: @Model.SupplierName</h4>
+    <p>Địa Chỉ: @Model.Address</p>
+    <p>Số Điện Thoại: @Model.PhoneNumber</p>
+    <p>Email: @Model.Email</p>
+</div>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="SupplierId" /> <!-- ID của nhà cung cấp, để truyền vào phương thức Delete -->
+    <button type="submit" class="btn btn-danger">Xóa</button>
+    <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+</form>

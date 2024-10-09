@@ -1,0 +1,30 @@
+﻿@model BaiKiemTra03_04.Models.Order
+
+@{
+    ViewData["Title"] = "Sửa thông tin đơn hàng";
+}
+
+<h2>Sửa Thông Tin Đơn Hàng</h2>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="OrderId" />
+    <div class="form-group">
+        <label>Ngày Đặt Hàng</label>
+        <input asp-for="OrderDate" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Tổng Giá Trị</label>
+        <input asp-for="TotalAmount" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Nhà Cung Cấp</label>
+        <select asp-for="SupplierId" asp-items="ViewBag.Suppliers" class="form-control"></select>
+    </div>
+    <div class="form-group">
+        <label>Tình Trạng Đơn Hàng</label>
+        <input asp-for="OrderStatus" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Lưu Thay Đổi</button>
+</form>
+
+<a asp-action="Index" class="btn btn-secondary">Quay lại danh sách</a>

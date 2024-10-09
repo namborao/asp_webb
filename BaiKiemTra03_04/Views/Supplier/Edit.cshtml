@@ -1,0 +1,38 @@
+﻿@model BaiKiemTra03_04.Models.Supplier
+
+@{
+    ViewData["Title"] = "Sửa thông tin nhà cung cấp";
+}
+
+<h2>Sửa Thông Tin Nhà Cung Cấp</h2>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="SupplierId" /> <!-- ID của nhà cung cấp, ẩn không chỉnh sửa -->
+
+    <div class="form-group">
+        <label>Tên Nhà Cung Cấp</label>
+        <input asp-for="SupplierName" class="form-control" />
+        <span asp-validation-for="SupplierName" class="text-danger"></span> <!-- Hiển thị lỗi nếu có -->
+    </div>
+
+    <div class="form-group">
+        <label>Địa Chỉ</label>
+        <input asp-for="Address" class="form-control" />
+        <span asp-validation-for="Address" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Số Điện Thoại</label>
+        <input asp-for="PhoneNumber" class="form-control" />
+        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Email</label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Lưu Thay Đổi</button>
+    <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+</form>
