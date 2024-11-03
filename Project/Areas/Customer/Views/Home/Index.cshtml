@@ -1,8 +1,30 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model IEnumerable<SanPham>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-3 p-3">
+            <div class="card" style="width: 18rem;">
+
+                <a asp-action="Details" asp-route-sanphamid="@item.Id">    
+                    <img src="@item.ImageUrl" class="card-img-top" alt="@item.Name">
+                </a>
+                <div class="card-body">
+                    <h4 class="card-title text-danger">@item.price</h4>
+                    <h5 class="card-title">@item.Name</h5>
+                    <p class="card-text">@item.Description</p>
+                    <div class="row">
+                        <div class="col-6">
+                            <a href="#" class="btn btn-primary">Thêm Vào Giỏ Hàng</a>
+                        </div>
+                        <div class="col-6">
+                            <a href="#" class="btn btn-danger">Mua hàng</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
 </div>
+
+<a href="@Url.Action("Create", "SanPham")" class="btn btn-success">Tạo sản phẩm mới</a>

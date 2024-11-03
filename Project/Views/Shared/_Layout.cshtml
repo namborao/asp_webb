@@ -7,44 +7,153 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Project.styles.css" asp-append-version="true" />
+    <style>
+        .navbar {
+            background-color: green;
+        }
+
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+        }
+
+        .navbar-nav .nav-item .nav-link:hover {
+            background-color: green;
+            border-radius: 5px;
+        }
+
+        .product-item {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 15px 0;
+            text-align: center;
+        }
+
+            .product-item img {
+                max-width: 100%;
+                height: auto;
+                margin-bottom: 15px;
+            }
+
+        .product-price {
+            font-size: 1.2rem;
+            color: red;
+            margin-bottom: 10px;
+        }
+
+        .product-action {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+            .footer a {
+                color: #007bff;
+            }
+
+                .footer a:hover {
+                    color: #0056b3;
+                }
+    </style>
 </head>
+
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Project</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+        <nav class="navbar navbar-expand-lg navbar-light shadow">
+            <div class="container d-flex justify-content-between align-items-center">
+
+                <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
+                    <img src="~/img/logo.jpg" alt="Logo" style="height: 40px; width: auto;">
+                    
+                </a>
+
+
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link active" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        @await Component.InvokeAsync("TheLoai")
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="pages/chinh-sach-mua-hang-1" id="categoryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Chính sách mua hàng
+                            </a>
+
+                            <ul class="dropdown-menu" aria-labelledby="categoryDropdown">
+
+                                <li><a class="dropdown-item" href="FilterByTheLoai"></a></li>
+                            </ul>
                         </li>
                     </ul>
-                    <partial name="_LoginPartial" />
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <partial name="_LoginPartial" />
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
     </header>
+
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - Project - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="bg-body-tertiary text-center">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/profile.php?id=100065273300596" class="btn text-white btn-floating m-1" style="background-color: #3b5998;" role="button">
+                    <img src="~/img/anhfb.png" alt="Facebook" style="height: 30px; width: auto;">
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com/namborao" class="btn text-white btn-floating m-1" style="background-color: #333333;" role="button">
+                    <img src="~/img/anhgit.webp" alt="GitHub" style="height: 30px; width: auto;">
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/n.ahahahha/" class="btn text-white btn-floating m-1" style="background-color: #ac2bac;" role="button">
+                    <img src="~/img/anhins.webp" alt="Instagram" style="height: 30px; width: auto;">
+                </a>
+
+                <!-- TikTok -->
+                <a href="https://tiktok.com" class="btn text-white btn-floating m-1" style="background-color: #000000;" role="button">
+                    <img src="~/img/anhtiktok.webp" alt="TikTok" style="height: 30px; width: auto;">
+                </a>
+            </section>
+            <!-- Section: Social media -->
         </div>
+        <!-- Grid container -->
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2024 Copyright:
+            <a class="text-body" href="https://hoainamdz.com/">HoaiNamdz.com</a>
+        </div>
+        <!-- Copyright -->
     </footer>
+
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    
     @await RenderSectionAsync("Scripts", required: false)
+
 </body>
 </html>

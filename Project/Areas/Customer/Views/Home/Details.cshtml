@@ -1,0 +1,102 @@
+﻿@model GioHang
+    <style>
+        .product-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .quantity-control {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+        }
+
+            .quantity-control button {
+                width: 40px;
+                height: 40px;
+            }
+
+        .quantity-input {
+            width: 60px;
+            text-align: center;
+        }
+    </style>
+    <div class="container mt-5">
+    <div class="row">
+        <form method ="post">
+            <!-- Product Image -->
+            <div class="col-md-6">
+                <img src="@Model.SanPham.ImageUrl" alt="Product Image" class="product-image">
+            </div>
+
+            <!-- Product Details -->
+            <div class="col-md-6">
+                <h1 class="product-title">@Model.SanPham.Name</h1>
+                <p class="product-description">@Model.SanPham.Description</p>
+                <h4 class="product-price">@string.Format("{0:N0} VNĐ", @Model.SanPham.price)</h4>
+
+                <!-- Quantity Selector -->
+                <div class="quantity-control my-3">
+                    <a class="btn btn-outline-secondary" onclick="decreaseQuantity()">-</a>
+                    <input asp-for="@Model.Quantity" id="quantity" type="number" class="form-control quantity-input mx-2" id="quantity" value="1" readonly>
+                    <a class="btn btn-outline-secondary" onclick="increaseQuantity()">+</a>
+                </div>
+
+                <!-- Add to Cart Button -->
+                <div class="row">
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Thêm vào giỏ hàng</button>
+
+                    </div>
+                    <div class="col-6">
+                        <a href="#" class="btn btn-danger">Mua Hàng</a>
+                    </div>
+
+                    <!-- Success Message -->
+                    <div id="cart-message" class="alert alert-success mt-3 d-none">
+                        Product added to cart successfully!
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script>
+
+        function increaseQuantity() {
+            var quantityInput = document.getElementById('quantity');
+            var currentValue = parseInt(quantityInput.value);
+            quantityInput.value = currentValue + 1;
+        }
+
+        function decreaseQuantity() {
+            var quantityInput = document.getElementById('quantity');
+            var currentValue = parseInt(quantityInput.value);
+            if (currentValue > 1) {
+                quantityInput.value = currentValue - 1;
+            }
+        }
+
+        function addToCart() {
+            var quantity = document.getElementById('quantity').value;
+            var messageDiv = document.getElementById('cart-message');
+            // Display success message
+            messageDiv.classList.remove('d-none');
+            messageDiv.textContent = 'Product added to cart! Quantity: ' + quantity;
+
+            // Optionally, you can reset the quantity back to 1 after adding to cart
+            document.getElementById('quantity').value = 1;
+
+            // Hide message after 3 seconds
+            setTimeout(function () {
+                messageDiv.classList.add('d-none');
+            }, 3000);
+        }
+    </script>
+
+
+
+

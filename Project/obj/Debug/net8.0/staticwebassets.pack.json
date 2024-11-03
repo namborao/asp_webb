@@ -13,6 +13,26 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\hoc\\LTWEB_ASP\\asp_webb\\Project\\wwwroot\\img\\anhfb.png",
+      "PackagePath": "staticwebassets\\img\\anhfb.png"
+    },
+    {
+      "Id": "C:\\hoc\\LTWEB_ASP\\asp_webb\\Project\\wwwroot\\img\\anhgit.webp",
+      "PackagePath": "staticwebassets\\img\\anhgit.webp"
+    },
+    {
+      "Id": "C:\\hoc\\LTWEB_ASP\\asp_webb\\Project\\wwwroot\\img\\anhins.webp",
+      "PackagePath": "staticwebassets\\img\\anhins.webp"
+    },
+    {
+      "Id": "C:\\hoc\\LTWEB_ASP\\asp_webb\\Project\\wwwroot\\img\\anhtiktok.webp",
+      "PackagePath": "staticwebassets\\img\\anhtiktok.webp"
+    },
+    {
+      "Id": "C:\\hoc\\LTWEB_ASP\\asp_webb\\Project\\wwwroot\\img\\logo.jpg",
+      "PackagePath": "staticwebassets\\img\\logo.jpg"
+    },
+    {
       "Id": "C:\\hoc\\LTWEB_ASP\\asp_webb\\Project\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
